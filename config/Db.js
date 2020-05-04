@@ -6,7 +6,7 @@ const db = config.get("mongoURI");
 //whenever its used a async await is good to do it in a try catch block
 const connectDB = async () => {
   try {
-    await mongoose.connect(db, { useNewUrlParser: true });
+    await mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true });
     console.log("Mongodb connected");
   } catch (err) {
     console.error(err.message);
