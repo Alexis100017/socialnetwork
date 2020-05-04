@@ -3,11 +3,13 @@ const connectDB = require("./config/Db");
 const app = express();
 
 //connect db
-
 connectDB();
 
-app.get("/", (req, res) => res.send("API running"));
+//init middleware, which will help to get data in the request body
+app.use(express.json({ extended: false }));
+
 //endpoint definitions
+app.get("/", (req, res) => res.send("API running"));
 app.use("/api/users", require("./routes/api/Users"));
 app.use("/api/auth", require("./routes/api/Auth"));
 app.use("/api/profile", require("./routes/api/Profile"));
