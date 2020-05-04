@@ -23,7 +23,14 @@
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.11"
   },
-   "//": [ 
-    "first line" 
-   ]
+  "//": [
+    "express validator is used to data validation, for example if we are making a post/get request to the API and if it needs fields that are not there, it will raise and error ",
+    "bcryptjs is used for password encryption",
+    "config is used for global variables",
+    "gravatar simply to extract a picture",
+    "moongoose is a layer which is at top of the db in order to interact with it",
+    "request is a ",
+    "concurrently is able to run in   parallel sv and client",
+    "nodemon watch the sv so it refresh by itself"
+  ]
 }
